@@ -1,0 +1,159 @@
+Microsoft Windows [Version 10.0.19044.2251]
+
+student@B209-9 d:\openserver
+$ cd domains
+
+student@B209-9 d:\OpenServer\domains
+$ cd localhost
+
+
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer require slim/slim:"4.*"
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Info from https://repo.packagist.org: #StandWithUkraine
+./composer.json has been created
+Running composer update slim/slim
+Loading composer repositories with package information
+Info from https://repo.packagist.org: #StandWithUkraine
+Updating dependencies
+Lock file operations: 8 installs, 0 updates, 0 removals
+  - Locking nikic/fast-route (v1.3.0)
+  - Locking psr/container (2.0.2)
+  - Locking psr/http-factory (1.0.1)
+  - Locking psr/http-message (1.0.1)
+  - Locking psr/http-server-handler (1.0.1)
+  - Locking psr/http-server-middleware (1.0.1)
+  - Locking psr/log (3.0.0)
+  - Locking slim/slim (4.11.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 8 installs, 0 updates, 0 removals
+  - Installing psr/log (3.0.0): Extracting archive
+  - Installing psr/http-message (1.0.1): Extracting archive
+  - Installing psr/http-server-handler (1.0.1): Extracting archive
+  - Installing psr/http-server-middleware (1.0.1): Extracting archive
+  - Installing psr/http-factory (1.0.1): Extracting archive
+  - Installing psr/container (2.0.2): Extracting archive
+  - Installing nikic/fast-route (v1.3.0): Extracting archive
+  - Installing slim/slim (4.11.0): Extracting archive
+2 package suggestions were added by new dependencies, use `composer suggest` to see details.
+Generating autoload files
+1 package you are using is looking for funding.
+Use the `composer fund` command to find out more!
+
+
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer require slim/psr7
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Info from https://repo.packagist.org: #StandWithUkraine
+Using version ^1.6 for slim/psr7
+./composer.json has been updated
+Running composer update slim/psr7
+Loading composer repositories with package information
+Info from https://repo.packagist.org: #StandWithUkraine
+Updating dependencies
+Lock file operations: 4 installs, 0 updates, 0 removals
+  - Locking fig/http-message-util (1.1.5)
+  - Locking ralouphie/getallheaders (3.0.3)
+  - Locking slim/psr7 (1.6)
+  - Locking symfony/polyfill-php80 (v1.27.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 4 installs, 0 updates, 0 removals
+  - Installing symfony/polyfill-php80 (v1.27.0): Extracting archive
+  - Installing ralouphie/getallheaders (3.0.3): Extracting archive
+  - Installing fig/http-message-util (1.1.5): Extracting archive
+  - Installing slim/psr7 (1.6): Extracting archive
+Generating autoload files
+2 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+
+
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer require slim/php-view
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Info from https://repo.packagist.org: #StandWithUkraine
+Using version ^3.2 for slim/php-view
+./composer.json has been updated
+Running composer update slim/php-view
+Loading composer repositories with package information
+Info from https://repo.packagist.org: #StandWithUkraine
+Updating dependencies
+Lock file operations: 1 install, 0 updates, 0 removals
+  - Locking slim/php-view (3.2.0)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Downloading slim/php-view (3.2.0)
+  - Installing slim/php-view (3.2.0): Extracting archive
+Generating autoload files
+2 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer require j4mie/idiorm
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Info from https://repo.packagist.org: #StandWithUkraine
+Using version ^1.5 for j4mie/idiorm
+./composer.json has been updated
+Running composer update j4mie/idiorm
+Loading composer repositories with package information
+Info from https://repo.packagist.org: #StandWithUkraine
+Updating dependencies
+Lock file operations: 1 install, 0 updates, 0 removals
+  - Locking j4mie/idiorm (v1.5.8)
+Writing lock file
+Installing dependencies from lock file (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Downloading j4mie/idiorm (v1.5.8)
+  - Installing j4mie/idiorm (v1.5.8): Extracting archive
+Generating autoload files
+2 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+
+
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer du
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Generating autoload files
+Generated autoload files
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer du
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Generating autoload files
+Generated autoload files
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer install
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Nothing to install, update or remove
+Generating autoload files
+2 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer install
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Installing dependencies from lock file (including require-dev)
+Verifying lock file contents can be installed on current platform.
+Nothing to install, update or remove
+Generating autoload files
+2 packages you are using are looking for funding.
+Use the `composer fund` command to find out more!
+
+student@B209-9 d:\OpenServer\domains\localhost
+$ composer du
+Warning: This development build of Composer is over 60 days old. It is recommended to update it by running "d:\openserver\modules\php\PHP_8.0\..\..\..\userdata\composer\composer.phar self-update" to get the latest version.
+Generating autoload files
+Generated autoload files

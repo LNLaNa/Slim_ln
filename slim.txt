@@ -1,0 +1,8 @@
+Slim:
+https://maxsite.org/page/slim
+https://slimframework.ru/v4
+https://habr.com/ru/post/452834/
+https://github.com/slimphp/PHP-View
+
+Idiorm:
+https://idiormru.readthedocs.io/ru/latest/installation.html
