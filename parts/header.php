@@ -16,7 +16,7 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="/">home</a></li>
-                                        <li><a href="/browse&nbsp;job">Browse Job</a></li>
+                                        <li><a href="/jobs">Browse Job</a></li>
                                         <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="candidate.html">Candidates </a></li>

@@ -1,51 +1,3 @@
-<?php
-/** @var PDO $db */
-$db=require 'db.php';
-
-//для фильтра что б выводились все значения
-$category= null;
-if (isset($_GET['category_id']) && $_GET['category_id'] != ""){
-    $category='= '.$_GET['category_id'];
-
-}
-else {
-    $category='>= ' . 1;
-}
-$company=null;
-if (isset($_GET['company_id']) && $_GET['company_id'] != ""){
-    $company='= '.$_GET['company_id'];
-}
-else {
-    $company='>= ' . 1;
-}
-$nature=null;
-if (isset($_GET['nature_id']) && $_GET['nature_id'] != ""){
-    $nature='= '.$_GET['nature_id'];
-}
-else {
-    $nature='>= ' . 1;
-}
-$name=$_GET['name']??'';
-
-//фильтр
-$jobs=$db->query("SELECT natures.id, natures.name as nature_name,companies.logo, jobs.id,jobs.name,jobs.category_id,companies.name AS company_name, 
-       jobs.company_id,jobs.location AS location_name,jobs.publication, categories.name as category_name, jobs.nature_id
-    FROM jobs 
-    INNER JOIN natures ON jobs.nature_id=natures.id
-    INNER JOIN companies ON companies.id=jobs.company_id
-    INNER JOIN categories ON categories.id=jobs.category_id
-    WHERE nature_id {$nature} 
-    AND category_id {$category} 
-    AND company_id {$company} 
-AND jobs.name LIKE '%{$name}%'
-")->fetchAll(PDO::FETCH_ASSOC);
-//
-//$jobs_company=$db->query("SELECT natures.id, natures.name as natures_name, jobs.id,jobs.name,jobs.category_id, jobs.company_id,jobs.location,jobs.publication FROM jobs INNER JOIN natures ON jobs.nature_id=natures.id WHERE jobs.company_id={$id_company}")->fetchAll(PDO::FETCH_ASSOC);
-//$jobs_category=$db->query("SELECT natures.id, natures.name as natures_name, jobs.id,jobs.name,jobs.category_id, jobs.company_id,jobs.location,jobs.publication FROM jobs INNER JOIN natures ON jobs.nature_id=natures.id WHERE jobs.category_id={$id_category}")->fetchAll(PDO::FETCH_ASSOC);
-$categories = $db->query("SELECT * FROM categories ")->fetchAll(PDO::FETCH_ASSOC);
-$natures = $db->query("SELECT * FROM natures ")->fetchAll(PDO::FETCH_ASSOC);
-
-?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -108,7 +60,7 @@ $natures = $db->query("SELECT * FROM natures ")->fetchAll(PDO::FETCH_ASSOC);
                     <div class="job_filter white-bg">
                         <div class="form_inner white-bg">
                             <h3>Filter</h3>
-                            <form action="jobs.php" method="get">
+                            <form action="/jobs" method="get">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="single_field">
@@ -137,7 +89,7 @@ $natures = $db->query("SELECT * FROM natures ")->fetchAll(PDO::FETCH_ASSOC);
                                                 <option data-display="Category" value="">Category</option>
 
                                                 <?php foreach ($categories as $category_item): ?>
-                                                    <option value="<?=$category_item['id']?>" <?php if($category_item['id'] == $_GET['category_id']):?> selected <?php endif; ?>><?= $category_item['name'] ?></option>
+                                                    <option value="<?=$category_item['id']?>" <?php if($category_item['id'] == $category_id):?> selected <?php endif; ?>><?= $category_item['name'] ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
@@ -156,7 +108,7 @@ $natures = $db->query("SELECT * FROM natures ")->fetchAll(PDO::FETCH_ASSOC);
                                             <select class="wide" name="nature_id">
                                                 <option data-display="Job type" value="">Job type</option>
                                                 <?php foreach ($natures as $nature_item): ?>
-                                                    <option value="<?= $nature_item['id'] ?>" <?php if($nature_item['id'] == $_GET['nature_id']):?> selected <?php endif; ?>><?= $nature_item['name'] ?></option>
+                                                    <option value="<?= $nature_item['id'] ?>" <?php if($nature_item['id'] == $nature_id):?> selected <?php endif; ?>><?= $nature_item['name'] ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
@@ -190,7 +142,7 @@ $natures = $db->query("SELECT * FROM natures ")->fetchAll(PDO::FETCH_ASSOC);
                                 <div class="reset_btn">
                                     <input  class="boxed-btn3 w-100" style="margin-bottom: 10px" type="submit" value="Find Job">
                                     <br>
-                                    <a  class="boxed-btn3 w-100" href="jobs.php?name=&category_id=&nature_id=">Reset</a>
+                                    <a  class="boxed-btn3 w-100" href="/jobs?name=&category_id=&nature_id=">Reset</a>
                                 </div>
                             </form>
                         </div>
@@ -228,7 +180,7 @@ $natures = $db->query("SELECT * FROM natures ")->fetchAll(PDO::FETCH_ASSOC);
                                             <img src="<?=$job['logo']?>" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.php?id=<?=$job['id']?>"><h4><?=$job['name']?></h4></a>
+                                            <a href="/job/<?=$job['id']?>"><h4><?=$job['name']?></h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
                                                     <p> <i class="fa fa-map-marker"></i> <?=$job['location_name']?></p>
@@ -242,7 +194,7 @@ $natures = $db->query("SELECT * FROM natures ")->fetchAll(PDO::FETCH_ASSOC);
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href=""> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.php?id=<?= $job['id']?>" class="boxed-btn3">Apply Now</a>
+                                            <a href="/job/<?=$job['id']?>" class="boxed-btn3">Apply Now</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: <?=$job['publication']?></p>
@@ -330,7 +282,7 @@ $natures = $db->query("SELECT * FROM natures ")->fetchAll(PDO::FETCH_ASSOC);
                         </div>
                     </div>
                     <!-- category footer -->
-                    <?php require $_SERVER['DOCUMENT_ROOT'] . '/ln_job/parts/footer_category.php';?>
+                    <?php require $_SERVER['DOCUMENT_ROOT'] . '/parts/footer_category.php';?>
                     <div class="col-xl-4 col-md-6 col-lg-4">
                         <div class="footer_widget wow fadeInUp" data-wow-duration="1.3s" data-wow-delay=".6s">
                             <h3 class="footer_title">

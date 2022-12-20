@@ -114,7 +114,7 @@
                 <div class="apply_job_form white-bg">
                     <h4>Apply for the job</h4>
                     <!-- форма -->
-                    <form action="ln/send_form.php" method="POST">
+                    <form action="/form" method="POST">
                         <input type="hidden" name="id" value="<?= $jobs['id_job']?>">
                         <div class="row">
                             <div class="col-md-6">

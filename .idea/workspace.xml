@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4a340df-f914-4150-916e-d3cf5da2cf33" name="Changes" comment="17.12" />
+    <list default="true" id="e4a340df-f914-4150-916e-d3cf5da2cf33" name="Changes" comment="17.12">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controllers/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controllers/PageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/footer_category.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/footer_category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/parts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/job_details.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/job_details.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/jobs.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/jobs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/send_form.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +61,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/parts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testing" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -74,7 +86,12 @@
       <workItem from="1671239757999" duration="195000" />
       <workItem from="1671239958271" duration="269000" />
       <workItem from="1671240233821" duration="75000" />
-      <workItem from="1671240311250" duration="6392000" />
+      <workItem from="1671240311250" duration="7005000" />
+      <workItem from="1671419255573" duration="317000" />
+      <workItem from="1671430221372" duration="175000" />
+      <workItem from="1671430463453" duration="1015000" />
+      <workItem from="1671431490566" duration="1015000" />
+      <workItem from="1671500708523" duration="8147000" />
     </task>
     <task id="LOCAL-00001" summary="17.12">
       <created>1671240173957</created>
@@ -97,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671247978827</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="17.12">
+      <created>1671250345673</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671250345673</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,5 +141,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="17.12" />
     <option name="LAST_COMMIT_MESSAGE" value="17.12" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/jobs.php</url>
+          <line>109</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

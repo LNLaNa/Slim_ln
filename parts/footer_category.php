@@ -6,7 +6,7 @@
         <ul>
             <?php
             foreach ($categories as $category):?>
-                <li><a href="/ln_job/jobs.php?nature_id=&name=&category_id=<?= $category['id']?>"><?=$category['name']?></a></li>
+                <li><a href="/jobs?nature_id=&name=&category_id=<?= $category['id']?>"><?=$category['name']?></a></li>
             <?php endforeach;?>
         </ul>
     </div>

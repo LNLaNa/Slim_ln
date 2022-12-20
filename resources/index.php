@@ -94,7 +94,7 @@
             </div>
             <div class="col-lg-3 col-md-12">
                 <div class="job_btn">
-                    <a href="jobs.php" class="boxed-btn3">Find Job</a>
+                    <a href="/jobs" class="boxed-btn3">Find Job</a>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
             foreach ($categories as $category):?>
                 <div class="col-lg-4 col-xl-3 col-md-6">
                     <div class="single_catagory">
-                        <a href="jobs.php?name=&category_id=<?=$category['id']?>&nature_id="><h4><?=$category['name']?></h4></a>
+                        <a href="/jobs?name=&category_id=<?=$category['id']?>&nature_id="><h4><?=$category['name']?></h4></a>
                         <p> <span><?=$category['COUNT(jobs.category_id)']?></span> Available position</p>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="brouse_job text-right">
-                    <a href="jobs.php" class="boxed-btn4">Browse More Job</a>
+                    <a href="/jobs" class="boxed-btn4">Browse More Job</a>
                 </div>
             </div>
         </div>
@@ -184,7 +184,7 @@
                             <div class="jobs_right">
                                 <div class="apply_now">
                                     <a class="heart_mark" href=""> <i class="ti-heart"></i> </a>
-                                    <a href="job_details.php?id=<?=$job['id']?>" class="boxed-btn3">Apply Now</a>
+                                    <a href="/job/<?=$job['id']?>" class="boxed-btn3">Apply Now</a>
                                 </div>
                                 <div class="date">
                                     <p>Date line: <?=$job['publication']?></p>
@@ -320,7 +320,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="brouse_job text-right">
-                    <a href="jobs.html" class="boxed-btn4">Browse More Job</a>
+                    <a href="/jobs" class="boxed-btn4">Browse More Job</a>
                 </div>
             </div>
         </div>
@@ -332,7 +332,7 @@
                         <div class="thumb">
                             <img src="<?=$company['logo']?>" alt="">
                         </div>
-                        <a href="jobs.php?name=&category_id=&nature_id=&company_id=<?=$company['id']?>"><h3><?=$company['name']?></h3></a>
+                        <a href="/jobs?name=&category_id=&nature_id=&company_id=<?=$company['id']?>"><h3><?=$company['name']?></h3></a>
                         <p> <span><?=$company['COUNT(jobs.company_id)']?></span> Available position</p>
                     </div>
                 </div>
